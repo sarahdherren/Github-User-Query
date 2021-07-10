@@ -70,6 +70,7 @@ form.form button {
     position: relative;
     overflow: hidden;
     border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   }
 
   div.cardAvatar img {
@@ -104,7 +105,12 @@ form.form button {
   }
   div.followers a{
     padding: 5px 25px;
-    
+    text-decoration: none;
+    color: black;
+  }
+
+  div.followers a:hover{
+    font-weight: 700;
   }
 
   div.follower {
@@ -121,7 +127,7 @@ form.form button {
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   }
 
   div.imgWrapper img {
@@ -131,8 +137,33 @@ form.form button {
     height: 130%
   }
 
+  div.repoWrapper {
+    border: black solid 1px;
+    margin: 0 auto 25px auto;
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    max-width: 80vw;
+  }
+
+  div.repoWrapper h3 {
+    margin: 15px;
+  }
+
   div.repositories {
     margin-left: 100px;
+    max-height: 40vh;
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  div.repositories a {
+    text-decoration: none;
+    color: black
+  }
+
+  div.repositories a:hover {
+    font-weight: 700;
   }
   
   @media (prefers-reduced-motion: no-preference) {
