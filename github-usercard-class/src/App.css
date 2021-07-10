@@ -5,11 +5,12 @@ body {
 div.header {
   background-color: black;
   color: white;
-  width: 100vw;
-  position: fixed;
+  width: 100%;
+  position: absolute;
   top: 0;
   left: 0;
   padding: 20px;
+  
 }
 
 form.form {
@@ -60,6 +61,7 @@ form.form button {
 
   div.cardHeader {
       display: flex;
+      flex-wrap: wrap;
       padding: 50px;
   
   }
@@ -152,9 +154,10 @@ form.form button {
 
   div.repositories {
     margin-left: 100px;
-    max-height: 40vh;
+    max-height: 60vh;
     display: flex;
     flex-flow: column wrap;
+    overflow: hidden;
   }
 
   div.repositories a {
@@ -178,5 +181,28 @@ form.form button {
     }
     to {
       transform: rotate(360deg);
+    }
+  }
+
+  @media(max-width: 1190px) {
+    div.repositories {
+      max-height: 90vh;
+      margin-left: 20px;
+    }
+  }  
+
+  @media(max-width: 675px) {
+    
+    div.repositories {
+      max-height: none;
+      
+    }
+
+    div.cardTitle {
+      margin-left: 0;
+    }
+
+    div.header {
+      width: 675px;
     }
   }
