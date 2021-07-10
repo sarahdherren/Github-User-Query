@@ -1,0 +1,182 @@
+body {
+  margin: auto;
+}
+
+div.header {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+}
+
+form.form {
+  margin: 150px 50px 0;
+}
+
+form.form input {
+  padding: 10px;
+  border-radius: 7px;
+}
+
+form.form button {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.landing {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .landing-logo {
+    height: 40vh;
+    pointer-events: none;
+  }
+
+  .landing p {
+    margin-top: 100px;
+  }
+
+  button.reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto 0 auto;
+    width: 95%;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    
+  }
+
+  button.reset span {
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
+
+  div.cardHeader {
+      display: flex;
+      padding: 50px;
+  
+  }
+
+  div.cardAvatar {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  div.cardAvatar img {
+    display: inline;
+    margin: 0 auto;
+    margin-left: -25%;
+    height: 130%
+  }
+
+  div.cardTitle {
+    margin-left: 50px;
+  }
+
+  div.cardTitle h2 {
+    margin-bottom: 5px;
+  }
+
+  div.cardTitle p {
+    margin: 5px 15px;
+    font-style: italic;
+  }
+
+  div.cardTitle h3 {
+    margin-bottom: 0;
+  }
+
+  div.followers {
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+  }
+  div.followers a{
+    padding: 5px 25px;
+    text-decoration: none;
+    color: black;
+  }
+
+  div.followers a:hover{
+    font-weight: 700;
+  }
+
+  div.follower {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 50px 0;
+  }
+
+  div.imgWrapper {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  div.imgWrapper img {
+    display: inline;
+    margin: 0 auto;
+    margin-left: -25%;
+    height: 130%
+  }
+
+  div.repoWrapper {
+    border: black solid 1px;
+    margin: 0 auto 25px auto;
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    max-width: 80vw;
+  }
+
+  div.repoWrapper h3 {
+    margin: 15px;
+  }
+
+  div.repositories {
+    margin-left: 100px;
+    max-height: 40vh;
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  div.repositories a {
+    text-decoration: none;
+    color: black
+  }
+
+  div.repositories a:hover {
+    font-weight: 700;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .landing-logo {
+      animation: landing-logo-spin infinite 20s linear;
+    }
+  }
+  
+  @keyframes landing-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
