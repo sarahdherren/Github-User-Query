@@ -12,6 +12,7 @@ export default class App extends Component {
     isSubmitted: false,
     url: '',
     userData: {},
+    userExists: false,
     followers: [],
     repos: []
   };
@@ -34,7 +35,8 @@ export default class App extends Component {
       user:'',
       isSubmitted: false,
       url:'',
-      userData:{}
+      userData:{},
+      userExists: false
     })
   }
 
@@ -44,26 +46,33 @@ export default class App extends Component {
         .then(res => {
           console.log(res.data)
           this.setState({
-            userData: res.data
+            userData: res.data,
+            userExists: true
           })
         })
         .catch(err => {
           window.alert('No user found, please check spelling and search again', err)
         })
         .then(
-          axios.get(`${this.state.url}/followers`)
+          (this.state.userData === {} && this.state.userExists) && axios.get(`${this.state.url}/followers`)
             .then(res => {
               this.setState({
                 followers: res.data
               })
             })
+            .catch(err => {
+              window.alert('Something went wrong try again in 5 minutes', err)
+            })
             )
         .then(
-          axios.get(`${this.state.url}/repos`)
+          (this.state.userData === {} && this.state.userExists) && axios.get(`${this.state.url}/repos`)
           .then(res => {
             this.setState({
               repos: res.data
             })
+          })
+          .catch(err => {
+            window.alert('Something went wrong try again in 5 minutes', err)
           })
         )
       }}
